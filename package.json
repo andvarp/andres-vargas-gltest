@@ -1,0 +1,20 @@
+{
+  "name": "gltest",
+  "version": "1.0.0",
+  "description": "Andres Vargas Test",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass styles -o styles",
+    "build-js": "babel scripts/es6/main.js -o scripts/main.bundle.js",
+    "build": "npm run build-css && npm run build-js",
+    "serve": "npm run build && http-server -p 8080 -o"
+  },
+  "author": "Andres Vargas",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.0"
+  }
+}
