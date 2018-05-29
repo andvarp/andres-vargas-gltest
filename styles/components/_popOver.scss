@@ -1,7 +1,19 @@
 .pop-over.open {
 	visibility: visible;
 	opacity: 1;
+
+	& .pop-over-content .progress-content .bar {
+		.progress-indicator:after {
+			transition: transform .7s ease-in;
+			transition-delay: .5s;
+		}
+		.number-indicator {
+			opacity: 1;
+			transition: opacity .4s ease-in;
+		}
+	}
 }
+
 .pop-over {
 	visibility: hidden;
 	opacity: 0;
@@ -9,7 +21,7 @@
 	background-color: $light-gray;
 	border: 1px solid $black;
 	border-radius: 5px;
-	&-title{
+	& .pop-over-title{
 		background-color: $black;
 		color: $white;
 		text-indent: 5px;
@@ -17,7 +29,7 @@
 		line-height: 2.5rem;
 		border-radius: 0 0 5px 5px;
 	}
-	&-content{
+	& .pop-over-content{
 		background-color: $white;
 		border: 1px solid $black;
 		border-radius: 5px;
@@ -48,14 +60,14 @@
 						width: 100%;
 						height: 100%;
 						border-radius: 5px;
-						transition: transform 1s ease-in;
-						transform: translateX(var(--progres));
+						transform: translateX(var(--progress));
 					}
 				}
 
 				.number-indicator {
 					position: absolute;
-					left: var(--progres);
+					opacity: 0;
+					left: var(--progress);
 					top: 13px;
 					text-align: center;
 					transform: translateX(-55%);

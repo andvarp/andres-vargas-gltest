@@ -59,6 +59,12 @@ body {
 .pop-over.open {
   visibility: visible;
   opacity: 1; }
+  .pop-over.open .pop-over-content .progress-content .bar .progress-indicator:after {
+    transition: transform .7s ease-in;
+    transition-delay: .5s; }
+  .pop-over.open .pop-over-content .progress-content .bar .number-indicator {
+    opacity: 1;
+    transition: opacity .4s ease-in; }
 
 .pop-over {
   visibility: hidden;
@@ -67,22 +73,22 @@ body {
   background-color: #ebebeb;
   border: 1px solid #000000;
   border-radius: 5px; }
-  .pop-over-title {
+  .pop-over .pop-over-title {
     background-color: #000000;
     color: #ffffff;
     text-indent: 5px;
     margin: 0;
     line-height: 2.5rem;
     border-radius: 0 0 5px 5px; }
-  .pop-over-content {
+  .pop-over .pop-over-content {
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 5px;
     color: #707070; }
-    .pop-over-content .progress-content .bar {
+    .pop-over .pop-over-content .progress-content .bar {
       position: relative;
       margin: 0 3px; }
-      .pop-over-content .progress-content .bar .progress-indicator {
+      .pop-over .pop-over-content .progress-content .bar .progress-indicator {
         position: relative;
         background-color: #ebebeb;
         width: 100%;
@@ -92,7 +98,7 @@ body {
         -webkit-box-shadow: inset 0 1px 5px #000000;
         -moz-box-shadow: inset 0 1px 5px #000000;
         box-shadow: inset 0 1px 5px #000000; }
-        .pop-over-content .progress-content .bar .progress-indicator:after {
+        .pop-over .pop-over-content .progress-content .bar .progress-indicator:after {
           content: " ";
           display: block;
           background-color: #5fb254;
@@ -102,11 +108,11 @@ body {
           width: 100%;
           height: 100%;
           border-radius: 5px;
-          transition: transform 1s ease-in;
-          transform: translateX(var(--progres)); }
-      .pop-over-content .progress-content .bar .number-indicator {
+          transform: translateX(var(--progress)); }
+      .pop-over .pop-over-content .progress-content .bar .number-indicator {
         position: absolute;
-        left: var(--progres);
+        opacity: 0;
+        left: var(--progress);
         top: 13px;
         text-align: center;
         transform: translateX(-55%);
@@ -115,7 +121,7 @@ body {
         height: 35px;
         display: inline-block;
         line-height: 1.2rem; }
-    .pop-over-content .progress-content .target {
+    .pop-over .pop-over-content .progress-content .target {
       background-color: #929292;
       color: #ffffff;
       width: 60px;
@@ -126,9 +132,9 @@ body {
       padding-top: 9px;
       box-sizing: border-box;
       border: 1px solid #000000; }
-    .pop-over-content .info {
+    .pop-over .pop-over-content .info {
       text-align: center; }
-      .pop-over-content .info:before {
+      .pop-over .pop-over-content .info:before {
         content: '\01D4F2 ';
         height: 20px;
         width: 20px;
