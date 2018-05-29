@@ -6,7 +6,27 @@
 	<link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-	
+	<main class="wrapper">
+		
+		<div class="content">
+			<a href="#" class="progress-link">Want to know your progress?</a>
+		</div>
+
+		<div class="pop-over">
+			<p class="pop-over-title">Your Progress</p>
+			<div class="pop-over-content">
+				<div class="progress-content">
+					<strong class="reached">Reached:</strong>
+					<div class="bar">
+						<div class="progress-indicator"></div>
+						<span class="number-indicator"><strong>^ <span class="number current">$XX</span></strong></span>
+					</div>
+					<span class="target">Target <span class="number total">$XXX</span></span>
+				</div>
+				<p class="info">You need <span class="number to-reach">$XX</span> more to reach your target</p>
+			</div>
+		</div>
+	</main>
 	<script src="/scripts/main.bundle.js"></script>
 </body>
 </html>

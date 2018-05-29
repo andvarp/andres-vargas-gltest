@@ -1,0 +1,13 @@
+.progress-link {
+	background-color: $light-gray;
+	border: 1px solid $black;
+	display: inline-block;
+	padding: 10px 15px;
+	color: $black;
+	font-size: 1.8rem;
+	text-decoration: none;
+	border-radius: 5px;
+	&:hover {
+		background-color: $dark-gray;
+	}
+}

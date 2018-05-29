@@ -1,0 +1,56 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: verdana, arial, sans-serif;
+	font-size: 1.4rem;
+	color: $black;
+}
+
+.wrapper {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: minmax(420px, 1fr);
+	grid-template-rows: minmax(190px, 1fr) 1fr;
+	justify-items: center;
+
+	.content {
+		grid-row: 2;
+
+	}
+
+	.pop-over {
+		display: grid;
+		grid-row: 1;
+		justify-self: center;
+		align-self: end;
+		max-height: 190px;
+		max-width: 420px;
+		height: 100%;
+		width: 100%;
+		grid-template-rows: 25px 1fr;
+		margin-bottom: 5px;
+
+		&-content{
+			margin: 15px 25px;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+			justify-content: center;
+			padding-top: 15px;
+
+			.progress-content {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-self: center;
+				
+				.bar {
+					width: 220px;
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+}
